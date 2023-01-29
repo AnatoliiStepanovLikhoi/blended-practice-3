@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import
-  {
+import {
   Container,
   SearchForm,
   Section,
@@ -8,22 +7,20 @@ import
   Loader,
   CountryList,
 } from 'components';
-import { Country } from "./Country";
-import {fetchByRegion} from '../service/country-service'
+// import { Country } from "./Country";
+import { fetchByRegion } from '../service/country-service';
 
-export const CountrySearch = () =>
-{
-  const [ countries, setCountries ] = useState( [] );
-  const [ loading, setLoading ] = useState( null );
-  const [ error, setError ] = useState( null );
-  const [ input, setInput ] = useState( '' );
+export const CountrySearch = () => {
+  const [countries, setCountries] = useState([]);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
+  const [input, setInput] = useState('');
 
-  const inputHandler = ( input ) =>
-  {
-    setInput( input );
-  }
+  const inputHandler = input => {
+    setInput(input);
+  };
 
-useEffect(() => {
+  useEffect(() => {
     setLoading(true);
 
     const fetchCountriesByRegion = async () => {
@@ -41,15 +38,14 @@ useEffect(() => {
     };
 
     fetchCountriesByRegion();
-  }, [ input ] );
-
+  }, [input]);
 
   return (
     <Section>
       <Container>
-       {loading && <Loader />}
-        <SearchForm onSubmit={inputHandler}/>
-        <CountryList countries={ countries } />
+        {loading && <Loader />}
+        <SearchForm onSubmit={inputHandler} />
+        <CountryList countries={countries} />
         {error && !countries && <Heading>Ops, something went wrong!</Heading>}
       </Container>
     </Section>
