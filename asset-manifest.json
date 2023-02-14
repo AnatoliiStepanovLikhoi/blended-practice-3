@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/blended-practice-3/static/css/main.412fc565.css",
+    "main.js": "/blended-practice-3/static/js/main.6443b6b4.js",
+    "index.html": "/blended-practice-3/index.html",
+    "main.412fc565.css.map": "/blended-practice-3/static/css/main.412fc565.css.map",
+    "main.6443b6b4.js.map": "/blended-practice-3/static/js/main.6443b6b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.412fc565.css",
+    "static/js/main.6443b6b4.js"
+  ]
+}
